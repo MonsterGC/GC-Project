@@ -1,0 +1,27 @@
+<view class="section">
+  <view>
+    <i-divider content="来兑换你喜欢的东西吧"></i-divider>
+  </view>
+  <view class="commoditycontainer" wx:for="{{array}}" wx:for-item="itemName" wx:key="id">
+    <view>
+      <view class="picturecontainer" style="float:left;">
+        <image style="width:200rpx;height:200rpx;" src="{{itemName.picture}} "></image>
+      </view>
+    </view>
+    <view>
+      <view class="contentcontainer ">
+        <view class="goodname">{{itemName.name}}</view>
+        <view class="goodcontent">{{itemName.content}}</view>
+        <view class="goodlove" style="margin-bottom:10rpx;">{{itemName.price}}
+          <i-icon type="like" />
+        </view>
+        <view bindtap="tap" data-Id="{{index}}" style="float:right;color:#80848f;margin-top:-15rpx;font-size:14px;">点击兑换
+          <i-icon type="publishgoods_fill " size="20 " color="#80848f" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <i-load-more tip="客官到底了，往上滑" loading="{{ false }}" />
+  </view>
+</view>

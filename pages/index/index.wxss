@@ -1,0 +1,133 @@
+/* 头部下拉框 */
+
+.product-list {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.choice-bar {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  background-color: #fff;
+  color: #495060;
+}
+
+.chioce-item {
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  width: 690rpx;
+  height: 80rpx;
+  border-top: 12rpx solid #2b85e4;
+  border-bottom: 12rpx solid #2b85e4;
+  border-left: 12rpx solid #2b85e4;
+  border-right: 20rpx solid #2b85e4;
+  color: #495060;
+}
+
+.icon-chioce {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+/* 地图 */
+
+.index-map {
+  position: absolute;
+  margin-top: 110rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 730rpx;
+  height: 170px;
+}
+
+.index-textarea {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 230px;
+}
+
+.title {
+  margin: 20rpx;
+  display: flex;
+  position: relative;
+}
+
+.title .title-left {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.title .title-right {
+  position: absolute;
+  top: 5rpx;
+  right: 0rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.title .title-right-count {
+  color: rgba(153, 153, 153, 1);
+}
+
+.content {
+  padding: 20rpx;
+  width: 680rpx;
+  height: 120rpx;
+}
+
+.content .text_class {
+  width: 100%;
+  height: 200rpx;
+  font-size: 26rpx;
+  line-height: 1.25;
+  z-index: -1;
+  color: #1c2438;
+  position: static;
+}
+
+.picturecontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.headcontent {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.headcontent text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom {
+  background-color: #2b85e4;
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}

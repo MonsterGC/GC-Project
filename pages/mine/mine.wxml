@@ -1,0 +1,21 @@
+<view class="whole">
+  <view class="header-container">
+    <image class='header-bg' src='../../images/bg.jpeg'></image>
+  </view>
+  <view>
+    <i-card title="{{username}}" extra=">" thumb="{{useravatar}}" bindtap='myinfojump'>
+      <view slot="content">
+        <span>
+          <i-icon style="float:left" color="#5cadff" size="20" type="like" />
+          <view style="font-size:14px;float:left">爱心</view>
+          <view style="font-size:12px;float:left;margin-top:5rpx;margin-left:16rpx;">{{lovecount}}</view>
+        </span>
+      </view>
+    </i-card>
+    <i-cell-group wx:for="{{cardList}}" data-item="item" wx:key="id">
+      <i-cell title="{{item.title}}" is-link url="{{item.url}}">
+        <i-icon slot="icon" type="{{item.type}}" size="26" color="#5cadff" />
+      </i-cell>
+    </i-cell-group>
+  </view>
+</view>

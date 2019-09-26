@@ -1,0 +1,81 @@
+<view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}">
+    <view class='header'>
+      <image src='../../images/wx_login.png'></image>
+    </view>
+    <view class='headcontent'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+    <button class='bottom' style="color:white" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+<view wx:else>
+  <view>
+    <!--选择框-->
+    <view class="product-list">
+      <view class="choice-bar">
+        <view class="chioce-item">{{start}}
+          <image class="icon-chioce" src="../../images/icon/list.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 地图 -->
+    <view class="index-map">
+      <map id="map" longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="13" show-location style="width: 100%; height: 170px;"></map>
+    </view>
+    <!-- 我的发现 -->
+    <view class="index-textarea">
+      <!-- 发现-标题 -->
+      <view class='title'>
+        <view class='title-left'>我的发现</view>
+        <view class='title-right'>
+          <span class='title-right-count'>{{currentWordNumber|0}}</span>/{{max}}</view>
+      </view>
+      <!-- 发现-内容 -->
+      <view class='content'>
+        <textarea class='text_class' placeholder="这一刻你的想法......" placeholder-style="color:#495060;" maxlength='{{max}}' value="{{value}}" bindinput="inputs">
+        </textarea>
+      </view>
+      <!-- 发现图片上传 -->
+      <view class='picturecontainer'>
+        <!-- 发现-图片上传 -->
+        <view class="page">
+          <view class="page__bd">
+            <view class="weui-cells">
+              <view class="weui-cell">
+                <view class="weui-cell__bd">
+                  <view class="weui-uploader">
+                    <view class="weui-uploader__hd">
+                      <view class="weui-uploader__overview">
+                        <view class="weui-uploader__title">图片上传</view>
+                        <view class="weui-uploader__info">{{files.length}}/3</view>
+                      </view>
+                    </view>
+                    <view class="weui-uploader__bd">
+                      <view class="weui-uploader__files" id="uploaderFiles">
+                        <block wx:for="{{files}}" wx:key="*this">
+                          <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                            <image style="width:120rpx;height:120rpx;" class="weui-uploader__img" src="{{item}}" mode="aspectFill" bindlongpress="deleteImage" data-Id="{{index}}" bindtap="previewImage" />
+                          </view>
+                        </block>
+                      </view>
+                      <view wx:if="{{files.length<3}}" style="width:120rpx;height:120rpx;" class="weui-uploader__input-box">
+                        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 提交按钮 -->
+      <view>
+        <i-button bindtap="handleClick" type="primary" shape="circle" size="small">提交</i-button>
+      </view>
+    </view>
+  </view>
+</view>

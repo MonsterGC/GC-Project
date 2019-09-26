@@ -1,0 +1,48 @@
+.tab-h {
+  height: 80rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  overflow: scroll;
+  line-height: 80rpx;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.tab-h::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+}
+
+.tab-item {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 100;
+  color: #80848f;
+  font-family: "Microsoft YaHei";
+}
+
+.tab-item.active {
+  color: #4675f9;
+  position: relative;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Microsoft YaHei";
+  border-bottom: 2rpx solid #4675f9;
+}
+
+.tab-content {
+  margin-top: 80rpx;
+}
+
+.scoll-h {
+  height: 100%;
+}
